@@ -25,7 +25,8 @@ const withConfiguration = WrappedComponent => () => {
             goal: goal,
             conditions: conditions,
             currency: currency,
-            gate: gate
+            gate: gate,
+            user: "userName"
         };
         if (isValid(donation)) {
             if (isEditMode) {
@@ -76,15 +77,17 @@ const withConfiguration = WrappedComponent => () => {
         const donation = donations.find((donations, id) => {
             return (id === donationId);
         });
-        setEntityName({entityName: donation.name, nameError: ""});
-        setSum({sum: donation.sum, sumError: ""});
-        setEntityType({entityType: donation.entityName, typeError: ""});
-        setGoal({goal: donation.goal, goalError: ""});
-        setConditions(donation.conditions);
-        setCurrency({currency: donation.currency, currencyError: ""});
-        setGate({gate: donation.gate, gateError: ""});
-        setIsOpen(true);
-        setIsEditMode(true);
+        if (donation.user === "userName") {
+            setEntityName({entityName: donation.name, nameError: ""});
+            setSum({sum: donation.sum, sumError: ""});
+            setEntityType({entityType: donation.entityName, typeError: ""});
+            setGoal({goal: donation.goal, goalError: ""});
+            setConditions(donation.conditions);
+            setCurrency({currency: donation.currency, currencyError: ""});
+            setGate({gate: donation.gate, gateError: ""});
+            setIsOpen(true);
+            setIsEditMode(true);
+        }
     };
 
     const resetFields = () => {
