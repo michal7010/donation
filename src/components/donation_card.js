@@ -18,7 +18,7 @@ const currenciesOptions = [{label: 'USD', value: 'USD'},
 const entityTypes = [{label: 'entity1', value: 'entity1'},
     {label: 'entity2', value: 'entity2'}];
 
-export const CreateCard = ({
+export const DonationCard = ({
                                resetFields,
                                entityName,
                                nameError,

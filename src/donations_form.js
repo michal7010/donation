@@ -1,5 +1,5 @@
 import React from "react";
-import {CreateCard} from "./components/create_card";
+import {DonationCard} from "./components/donation_card";
 import {Donations} from "./components/donations"
 import withConfiguration from "./configurations/donation_configuration";
 import styled from "styled-components";
@@ -59,31 +59,31 @@ const DonationsForm = ({
         <Container>
             <WrapHeader>
                 {isOpen &&
-                (<CreateCard entityName={entityName}
-                             setEntityName={setEntityName}
-                             sum={sum}
-                             setSum={setSum}
-                             entityType={entityType}
-                             setEntityType={setEntityType}
-                             goal={goal}
-                             setGoal={setGoal}
-                             conditions={conditions}
-                             setConditions={setConditions}
-                             currency={currency}
-                             setCurrency={setCurrency}
-                             gate={gate}
-                             setGate={setGate}
-                             donations={donations}
-                             setDonations={setDonations}
-                             addDonation={addDonation}
-                             isOpen={isOpen}
-                             resetFields={resetFields}
-                             nameError={nameError}
-                             sumError={sumError}
-                             goalError={goalError}
-                             gateError={gateError}
-                             typeError={typeError}
-                             currencyError={currencyError}
+                (<DonationCard entityName={entityName}
+                               setEntityName={setEntityName}
+                               sum={sum}
+                               setSum={setSum}
+                               entityType={entityType}
+                               setEntityType={setEntityType}
+                               goal={goal}
+                               setGoal={setGoal}
+                               conditions={conditions}
+                               setConditions={setConditions}
+                               currency={currency}
+                               setCurrency={setCurrency}
+                               gate={gate}
+                               setGate={setGate}
+                               donations={donations}
+                               setDonations={setDonations}
+                               addDonation={addDonation}
+                               isOpen={isOpen}
+                               resetFields={resetFields}
+                               nameError={nameError}
+                               sumError={sumError}
+                               goalError={goalError}
+                               gateError={gateError}
+                               typeError={typeError}
+                               currencyError={currencyError}
                 />)}
 
                 <Donations donations={donations} sum={sum} removeDonations={removeDonations}
